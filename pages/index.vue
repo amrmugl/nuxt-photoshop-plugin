@@ -1,9 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+	const response = ref();
+	onMounted(async () => {
+		const res = await useFetch('/api/prices/monthly');
+		response.value = res;
+	});
+</script>
 
 <template>
 	<div>
-		<h1 class="text-3xl font-bold underline"> Hello world! </h1>
+		<pre>{{ response }}</pre>
 	</div>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
