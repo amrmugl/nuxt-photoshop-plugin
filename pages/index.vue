@@ -1,14 +1,8 @@
-<script setup lang="ts">
-	const response = ref();
-	onMounted(async () => {
-		const res = await useFetch('/api/prices/monthly');
-		response.value = res;
-	});
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<div>
-		<pre>{{ response }}</pre>
+		<pre>oops!</pre>
 	</div>
 </template>
 
